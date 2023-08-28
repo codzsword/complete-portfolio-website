@@ -1,0 +1,37 @@
+/* ========== Dark and light mode toggle ======== */
+
+body:not(.dark) .theme-toggle .lni-sun,
+body.dark .theme-toggle .lni-night {
+    cursor: pointer;
+    color: var(--bg-color2);
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+body:not(.dark) .theme-toggle .lni-night {
+    display: none;
+
+}
+
+body.dark .theme-toggle .lni-sun {
+    display: none;
+}
+
+/* Large devices (desktops, 768px and up)  */
+
+@media (min-width: 768px) {
+
+    /* ===== Theme toggle responsive ========= */
+
+    body:not(.dark) .header-sticky .theme-toggle .lni-sun,
+    body.dark .header-sticky .theme-toggle .lni-night {
+        color: #3e4455;
+    }
+
+    body:not(.dark) .theme-toggle .lni-sun,
+    body.dark .theme-toggle .lni-night {
+        color: var(--color2);
+    }
+}
