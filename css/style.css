@@ -208,9 +208,6 @@ p strong {
 /* ========== RESUME SECTION STYLE ======== */
 
 
-/* ========== RESUME SECTION STYLE ======== */
-
-
 /* ========== ANIMATION FOR FADE EFFECT  ======== */
 
 @keyframes fade {
@@ -236,6 +233,9 @@ p strong {
         width: 0;
     }
 }
+
+/* ========== NAVIGATION LINK WHEN SCROLL ACTIVE ======== */
+
 
 /* ========== HEADER STICK TO TOP  ======== */
 
@@ -326,6 +326,7 @@ p strong {
 }
 
 /* ========== MAIN FOOTER   ======== */
+
 
 
 /* ----------------------------------------------------------------------------------------------- */
