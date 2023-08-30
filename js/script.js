@@ -96,3 +96,15 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
   toggleLocalStorageItem();
   toggleRootClass();
 });
+
+// Scroll to top
+
+const limit = 200;
+const scrollTopBtn = document.querySelector("#scroll-top-btn");
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+document.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  scrollTopBtn.classList.toggle("visible", window.scrollY >= limit);
+});
