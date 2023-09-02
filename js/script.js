@@ -53,7 +53,7 @@ function scrollTracker() {
 
   sections.forEach((section) => {
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 50;
+    const sectionTop = section.offsetTop - 100;
     const id = section.getAttribute("id");
     const currentNavLink = document.querySelector(
       `header .portfolio-navbar a[href*="#${id}"]`
@@ -107,4 +107,30 @@ function scrollToTop() {
 document.addEventListener("scroll", function () {
   console.log(window.scrollY);
   scrollTopBtn.classList.toggle("visible", window.scrollY >= limit);
+});
+
+// Scroll reveal
+
+const sr = ScrollReveal({
+  // reset: true,
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+
+sr.reveal(".about-intro, .project-slider", {
+  origin: "left",
+});
+sr.reveal(
+  ".resume-heading,.contact-info,.footer-contact,.testimonial-heading",
+  {
+    origin: "bottom",
+  }
+);
+sr.reveal(".service-row", {
+  origin: "bottom",
+  interval: 800,
+});
+sr.reveal(".resume-body", {
+  origin: "top",
 });
